@@ -1,4 +1,4 @@
-import { Box, Grid, Tooltip, Typography } from '@mui/material';
+import { Box, Grid, Typography } from '@mui/material';
 import Constants from '../../constants/constants';
 import IAnimationConfig from '../../models/animation-config';
 
@@ -35,11 +35,9 @@ export default function ProjectInfo(props: IProps) {
       </StyledGridItem>
 
       <StyledGridItem>
-        <Tooltip title={props?.config?.email} arrow>
-          <Typography fontSize='10px' fontWeight='inherit' noWrap>
-            {`by ${props?.config?.name} ${props?.config?.surname}`}
-          </Typography>
-        </Tooltip>
+        <Typography fontSize='10px' fontWeight='inherit' noWrap>
+          {`by ${props?.config?.name} ${props?.config?.surname}`}
+        </Typography>
       </StyledGridItem>
     </Grid>
   );
