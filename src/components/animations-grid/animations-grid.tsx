@@ -1,14 +1,14 @@
 import Grid from '@mui/material/Grid';
-import { useContext, useEffect, useState } from 'react';
-import GridHoverContextProvider, {
-  GridHoverContext,
-} from '../../contexts/grid-hover-context';
+import { useEffect, useState } from 'react';
+import { useAppDispatch } from '../../hooks/redux';
 import IAnimationConfig from '../../models/animation-config';
 import { MainConfigLoaderService } from '../../services/config-loader';
+import { removeHover } from '../../store/grid-hover-slice';
 import GridItem from '../grid-item/grid-item';
 
 export default function AnimationsGrid() {
-  const { hoverState, updateHover, updateState } = useContext(GridHoverContext);
+  const dispatch = useAppDispatch();
+  const handleRemoveHover = () => dispatch(removeHover());
 
   const [animationConfigs, setAnimationConfigs] = useState<IAnimationConfig[]>(
     []
@@ -18,27 +18,14 @@ export default function AnimationsGrid() {
     const configLoaderService = new MainConfigLoaderService();
     const configs = configLoaderService.loadAllConfigs();
 
-    updateState(configs);
     setAnimationConfigs(configs);
   }, []);
 
-  const updateHoverForConfig = (value: boolean, config: IAnimationConfig) => {
-    updateHover(value, config.id!);
-  };
-
-  const isHovering = (config: IAnimationConfig): boolean => {
-    return hoverState?.find((x) => x.key === config.id)?.isHovering ?? false;
-  };
-
   return (
-    <Grid container spacing={2}>
+    <Grid container spacing={2} onMouseLeave={() => handleRemoveHover()}>
       {animationConfigs.map((config) => (
         <Grid item key={config?.id}>
-          <GridItem
-            config={config}
-            onMouseEnter={() => updateHoverForConfig(true, config)}
-            onMouseLeave={() => updateHoverForConfig(false, config)}
-          />
+          <GridItem config={config} />
         </Grid>
       ))}
     </Grid>

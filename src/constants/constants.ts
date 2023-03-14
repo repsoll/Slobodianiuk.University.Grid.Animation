@@ -1,5 +1,40 @@
 import { Colour } from "../models/colour";
 import IAnimationConfig from "../models/animation-config";
+import IFrame from "../models/frame";
+
+const getCrossFrame = (frameNumber: number): IFrame => {
+    let result: IFrame = {
+        frameNumber: frameNumber,
+        pixels: []
+    };
+
+    for (let x = 0; x < Constants.GridRows; x++) {
+        for (let y = 0; y < Constants.GridColumns; y++) {
+
+            if (Constants.GridColumns - x > frameNumber) {
+                if (x === y || x + y === Constants.GridColumns - 1) {
+                    result.pixels.push({
+                        color: Colour.White,
+                        x: x,
+                        y: y
+                    });
+                }
+            }
+
+            if (frameNumber > Constants.GridColumns && Constants.GridColumns - x < frameNumber - Constants.GridColumns) {
+                if (x === y || x + y === Constants.GridColumns - 1) {
+                    result.pixels.push({
+                        color: Colour.White,
+                        x: x,
+                        y: y
+                    });
+                }
+            }
+        }
+    }
+
+    return result;
+}
 
 export default class Constants {
     static readonly GridColumns = 16;
@@ -20,77 +55,7 @@ export default class Constants {
         email: 'slobodyanukdev@gmail.com',
         projectName: 'Demo Project',
         personalProjectLink: 'http://demo-lecture-3.azurewebsites.net',
-        header: {
-            frameNumber: 0,
-            pixels: [
-                {
-                    x: 0,
-                    y: 0,
-                    color: Colour.White
-                },
-                {
-                    x: 1,
-                    y: 1,
-                    color: Colour.White
-                },
-                {
-                    x: 2,
-                    y: 2,
-                    color: Colour.White
-                },
-                {
-                    x: 3,
-                    y: 3,
-                    color: Colour.White
-                },
-                {
-                    x: 4,
-                    y: 4,
-                    color: Colour.White
-                },
-                {
-                    x: 0,
-                    y: 1,
-                    color: Colour.White
-                },
-                {
-                    x: 2,
-                    y: 1,
-                    color: Colour.White
-                }
-            ]
-        },
-        frames: [
-            {
-                frameNumber: 0,
-                pixels: [
-                    {
-                        x: 0,
-                        y: 0,
-                        color: Colour.White
-                    }
-                ]
-            },
-            {
-                frameNumber: 1,
-                pixels: [
-                    {
-                        x: 1,
-                        y: 1,
-                        color: Colour.White
-                    }
-                ]
-            },
-            {
-                frameNumber: 2,
-                pixels: [
-                    {
-                        x: 2,
-                        y: 2,
-                        color: Colour.White
-                    }
-                ]
-            }
-        ]
+        header: getCrossFrame(0),
+        frames: [...Array(32).keys()].map(x => getCrossFrame(x))
     }
 }

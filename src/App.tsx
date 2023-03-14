@@ -8,7 +8,6 @@ import {
 import './App.css';
 import AnimationsGrid from './components/animations-grid/animations-grid';
 import CustomAppBar from './components/app-bar/custom-app-bar';
-import GridHoverContextProvider from './contexts/grid-hover-context';
 
 export const theme = createTheme();
 
@@ -19,9 +18,7 @@ export default function App() {
       <CustomAppBar />
       <Container>
         <Box pt={3} pb={3}>
-          <GridHoverContextProvider>
-            <AnimationsGrid />
-          </GridHoverContextProvider>
+          <AnimationsGrid />
         </Box>
       </Container>
     </ThemeProvider>
