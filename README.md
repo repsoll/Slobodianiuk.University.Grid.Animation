@@ -31,7 +31,7 @@ Yours could differ.
 ### Frames
 - Maximum amount of frames is 120 which is roughly 5 seconds.
 - You could have less than 120 frames making your animation shorter.
-- You could have more than 12o frames, but in this case only first 120 frames will be displayed.
+- You could have more than 120 frames, but in this case only first 120 frames will be displayed.
 - After last frame is reached frame number is reset to zero making animation go forever in a loop.
 
 ### Project card
