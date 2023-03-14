@@ -1,4 +1,4 @@
-import { Card } from '@mui/material';
+import { Box, Card, Collapse, Grid } from '@mui/material';
 import { theme } from '../../App';
 import Constants from '../../constants/constants';
 import AnimatedPixelGrid from '../animated-pixel-grid/animated-pixel-grid';
@@ -42,11 +42,25 @@ export default function GridItem(props: IProps) {
         },
       }}
     >
-      {isHovering === false ? (
+      <Collapse
+        orientation='vertical'
+        in={isHovering}
+        collapsedSize={Constants.HeaderRows * Constants.PixelHeight}
+      >
+        <AnimatedPixelGrid config={props?.config} animate={isHovering} />
+      </Collapse>
+
+      <Box
+        sx={{
+          position: 'relative',
+          bottom: 0,
+        }}
+        pl={1.2}
+        pr={1.2}
+        pt={0.8}
+      >
         <ProjectInfo config={props?.config} />
-      ) : (
-        <AnimatedPixelGrid frames={props?.config?.frames} />
-      )}
+      </Box>
     </Card>
   );
 }

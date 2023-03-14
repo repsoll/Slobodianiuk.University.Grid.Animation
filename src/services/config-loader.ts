@@ -8,36 +8,7 @@ export class MainConfigLoaderService {
 
     constructor() {
         this.services = [
-            new AndriiSlobodianiukConfigLoaderService(),
-            new AndriiSlobodianiukConfigLoaderService(),
-            new AndriiSlobodianiukConfigLoaderService(),
-            new AndriiSlobodianiukConfigLoaderService(),
-            new AndriiSlobodianiukConfigLoaderService(),
-            new AndriiSlobodianiukConfigLoaderService(),
-            new AndriiSlobodianiukConfigLoaderService(),
-            new AndriiSlobodianiukConfigLoaderService(),
-            new AndriiSlobodianiukConfigLoaderService(),
-            new AndriiSlobodianiukConfigLoaderService(),
-
-            new AndriiSlobodianiukConfigLoaderService(),
-            new AndriiSlobodianiukConfigLoaderService(),
-            new AndriiSlobodianiukConfigLoaderService(),
-            new AndriiSlobodianiukConfigLoaderService(),
-            new AndriiSlobodianiukConfigLoaderService(),
-            new AndriiSlobodianiukConfigLoaderService(),
-            new AndriiSlobodianiukConfigLoaderService(),
-            new AndriiSlobodianiukConfigLoaderService(),
-            new AndriiSlobodianiukConfigLoaderService(),
-
-            new AndriiSlobodianiukConfigLoaderService(),
-            new AndriiSlobodianiukConfigLoaderService(),
-            new AndriiSlobodianiukConfigLoaderService(),
-            new AndriiSlobodianiukConfigLoaderService(),
-            new AndriiSlobodianiukConfigLoaderService(),
-            new AndriiSlobodianiukConfigLoaderService(),
-            new AndriiSlobodianiukConfigLoaderService(),
-            new AndriiSlobodianiukConfigLoaderService(),
-            new AndriiSlobodianiukConfigLoaderService(),
+            new AndriiSlobodianiukConfigLoaderService()
         ];
     }
 

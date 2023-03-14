@@ -6,7 +6,7 @@ import {
   ThemeProvider,
 } from '@mui/material';
 import './App.css';
-import AnimationsGrid from './components/animations-grid/animations-grid';
+import AnimationCardsGrid from './components/animation-cards-grid/animation-cards-grid';
 import CustomAppBar from './components/app-bar/custom-app-bar';
 
 export const theme = createTheme();
@@ -18,7 +18,7 @@ export default function App() {
       <CustomAppBar />
       <Container>
         <Box pt={3} pb={3}>
-          <AnimationsGrid />
+          <AnimationCardsGrid />
         </Box>
       </Container>
     </ThemeProvider>

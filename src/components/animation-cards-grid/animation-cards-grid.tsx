@@ -6,7 +6,7 @@ import { MainConfigLoaderService } from '../../services/config-loader';
 import { removeHover } from '../../store/grid-hover-slice';
 import GridItem from '../grid-item/grid-item';
 
-export default function AnimationsGrid() {
+export default function AnimationCardsGrid() {
   const dispatch = useAppDispatch();
   const handleRemoveHover = () => dispatch(removeHover());
 

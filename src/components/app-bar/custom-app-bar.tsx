@@ -7,10 +7,11 @@ import {
   Tooltip,
 } from '@mui/material';
 import GitHubIcon from '@mui/icons-material/GitHub';
+import Constants from '../../constants/constants';
 
 export default function CustomAppBar() {
   const handleGithubClick = () => {
-    window.open('https://github.com/aslobodyanuk', '_blank');
+    window.open(Constants.GithibLink, '_blank');
   };
 
   return (
