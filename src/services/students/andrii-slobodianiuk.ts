@@ -16,7 +16,7 @@ export class AndriiSlobodianiukConfigLoaderService implements IConfigLoaderServi
         return {
             name: 'Andrii',
             surname: 'Slobodianiuk',
-            email: 'slobodyanukdev@gmail.com',
+            email: this.getStudentEmail(),
             projectName: 'Demo Project',
             personalProjectLink: 'http://demo-lecture-3.azurewebsites.net',
             header: Constants.DefaultConfig.header,
