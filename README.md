@@ -1,5 +1,7 @@
 # Slobodianiuk.University.Grid.Animation
 
+Deployed on Azure: https://nice-ocean-06509da03.2.azurestaticapps.net
+
 ### How to launch a project?
 
 Install npm package manager:
