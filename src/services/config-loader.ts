@@ -1,6 +1,7 @@
 import IAnimationConfig from "../models/animation-config";
 import { IConfigLoaderService } from "./config-loader-interface";
 import { AndriiSlobodianiukConfigLoaderService } from "./students/andrii-slobodianiuk";
+import { OleksandrZhukConfigLoaderService } from "./students/oleksandr-zhuk"; 
 
 export class MainConfigLoaderService {
 
@@ -8,7 +9,8 @@ export class MainConfigLoaderService {
 
     constructor() {
         this.services = [
-            new AndriiSlobodianiukConfigLoaderService()
+            new AndriiSlobodianiukConfigLoaderService(),
+            new OleksandrZhukConfigLoaderService()
         ];
     }
 
