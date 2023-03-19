@@ -1,14 +1,15 @@
 import IAnimationConfig from "../models/animation-config";
 import { IConfigLoaderService } from "./config-loader-interface";
 import { AndriiSlobodianiukConfigLoaderService } from "./students/andrii-slobodianiuk";
-
+import { VitaliiSynytskyiConfigLoaderService } from "./students/vitalii-synytskyi";
 export class MainConfigLoaderService {
 
     private services: IConfigLoaderService[];
 
     constructor() {
         this.services = [
-            new AndriiSlobodianiukConfigLoaderService()
+            new AndriiSlobodianiukConfigLoaderService(),
+            new VitaliiSynytskyiConfigLoaderService()
         ];
     }
 
