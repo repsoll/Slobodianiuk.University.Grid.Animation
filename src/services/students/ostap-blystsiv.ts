@@ -108,6 +108,8 @@ const ROCKET_HEADER_PIXEL_STATES: IPixelState[] = [
   { x: 7, y: 13, color: Colour.White },
 ];
 
+const FRAMES_COUNT: number = 30;
+
 export class OstapBlystsivConfigLoaderService implements IConfigLoaderService {
   public getStudentName(): string {
     return 'Ostap Blystsiv';
@@ -130,30 +132,31 @@ export class OstapBlystsivConfigLoaderService implements IConfigLoaderService {
   }
 }
 
-function generateFrames(): IFrame[] {
+const generateFrames = (): IFrame[] => {
   const frames: IFrame[] = [];
 
-  for (let frameNumber = 0; frameNumber < 30; frameNumber++) {
-    const pixels: IPixelState[] = [];
-    const showRocket = frameNumber + 100;
+  if (FRAMES_COUNT < 30) {
+    throw new Error('FRAMES_COUNT must be at least 30');
+  }
 
-    if (showRocket) {
-      pixels.push(
-        ...ROCKET_PIXEL_STATES.map((state) => ({
-          ...state,
-          x: state.x - frameNumber,
-        })),
-      );
-    }
+  for (let frameNumber = 0; frameNumber < FRAMES_COUNT; frameNumber++) {
+    const pixels: IPixelState[] = [];
+
+    pixels.push(
+      ...ROCKET_PIXEL_STATES.map((state) => ({
+        ...state,
+        x: state.x - frameNumber,
+      })),
+    );
 
     frames.push({
-      frameNumber: frameNumber,
-      pixels: pixels,
+      frameNumber,
+      pixels,
     });
   }
 
   return frames;
-}
+};
 
 const generateHeaderFrame = (): IFrame => ({
   frameNumber: 1,
