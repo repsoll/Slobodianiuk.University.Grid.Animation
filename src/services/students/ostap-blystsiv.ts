@@ -135,10 +135,6 @@ export class OstapBlystsivConfigLoaderService implements IConfigLoaderService {
 const generateFrames = (): IFrame[] => {
   const frames: IFrame[] = [];
 
-  if (FRAMES_COUNT < 30) {
-    throw new Error('FRAMES_COUNT must be at least 30');
-  }
-
   for (let frameNumber = 0; frameNumber < FRAMES_COUNT; frameNumber++) {
     const pixels: IPixelState[] = [];
 
