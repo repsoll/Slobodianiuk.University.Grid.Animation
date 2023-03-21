@@ -1,6 +1,5 @@
 import IAnimationConfig from '../../models/animation-config';
 import { IConfigLoaderService } from '../config-loader-interface';
-import Constants from '../../constants/constants';
 import { Colour } from '../../models/colour';
 import IPixelState from '../../models/pixel-state';
 import IFrame from '../../models/frame';
@@ -74,6 +73,41 @@ const ROCKET_PIXEL_STATES: IPixelState[] = [
   { x: 16, y: 10, color: Colour.White },
 ];
 
+const ROCKET_HEADER_PIXEL_STATES: IPixelState[] = [
+  { x: 3, y: 2, color: Colour.White },
+  { x: 3, y: 3, color: Colour.White },
+  { x: 3, y: 4, color: Colour.White },
+  { x: 3, y: 5, color: Colour.White },
+  { x: 3, y: 9, color: Colour.White },
+  { x: 3, y: 10, color: Colour.White },
+  { x: 3, y: 13, color: Colour.White },
+
+  { x: 4, y: 2, color: Colour.White },
+  { x: 4, y: 8, color: Colour.White },
+  { x: 4, y: 11, color: Colour.White },
+  { x: 4, y: 13, color: Colour.White },
+
+  { x: 5, y: 2, color: Colour.White },
+  { x: 5, y: 4, color: Colour.White },
+  { x: 5, y: 5, color: Colour.White },
+  { x: 5, y: 8, color: Colour.White },
+  { x: 5, y: 11, color: Colour.White },
+  { x: 5, y: 13, color: Colour.White },
+
+  { x: 6, y: 2, color: Colour.White },
+  { x: 6, y: 5, color: Colour.White },
+  { x: 6, y: 8, color: Colour.White },
+  { x: 6, y: 11, color: Colour.White },
+
+  { x: 7, y: 2, color: Colour.White },
+  { x: 7, y: 3, color: Colour.White },
+  { x: 7, y: 4, color: Colour.White },
+  { x: 7, y: 5, color: Colour.White },
+  { x: 7, y: 9, color: Colour.White },
+  { x: 7, y: 10, color: Colour.White },
+  { x: 7, y: 13, color: Colour.White },
+];
+
 export class OstapBlystsivConfigLoaderService implements IConfigLoaderService {
   public getStudentName(): string {
     return 'Ostap Blystsiv';
@@ -90,7 +124,7 @@ export class OstapBlystsivConfigLoaderService implements IConfigLoaderService {
       email: this.getStudentEmail(),
       projectName: 'Rocket',
       personalProjectLink: 'https://google.com',
-      header: Constants.DefaultConfig.header,
+      header: generateHeaderFrame(),
       frames: generateFrames(),
     };
   }
@@ -120,3 +154,8 @@ function generateFrames(): IFrame[] {
 
   return frames;
 }
+
+const generateHeaderFrame = (): IFrame => ({
+  frameNumber: 1,
+  pixels: ROCKET_HEADER_PIXEL_STATES,
+});
