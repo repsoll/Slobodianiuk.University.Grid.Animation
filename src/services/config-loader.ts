@@ -1,7 +1,8 @@
 import IAnimationConfig from "../models/animation-config";
 import { IConfigLoaderService } from "./config-loader-interface";
 import { AndriiSlobodianiukConfigLoaderService } from "./students/andrii-slobodianiuk";
-import { OleksandrZhukConfigLoaderService } from "./students/oleksandr-zhuk"; 
+import { OleksandrZhukConfigLoaderService } from "./students/oleksandr-zhuk";
+import { YaroslavTsvykConfigLoaderService } from "./students/yaroslav-tsvyk";
 import { OstapBlystsivConfigLoaderService } from "./students/ostap-blystsiv";
 
 export class MainConfigLoaderService {
@@ -12,6 +13,7 @@ export class MainConfigLoaderService {
         this.services = [
             new AndriiSlobodianiukConfigLoaderService(),
             new OleksandrZhukConfigLoaderService(),
+            new YaroslavTsvykConfigLoaderService(),
             new OstapBlystsivConfigLoaderService()
         ];
     }
