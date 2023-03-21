@@ -1,6 +1,7 @@
 import IAnimationConfig from "../models/animation-config";
 import { IConfigLoaderService } from "./config-loader-interface";
 import { AndriiSlobodianiukConfigLoaderService } from "./students/andrii-slobodianiuk";
+import { VitaliiSynytskyiConfigLoaderService } from "./students/vitalii-synytskyi";
 import { OleksandrZhukConfigLoaderService } from "./students/oleksandr-zhuk";
 import { YaroslavPasichnykConfigLoaderService } from "./students/yaroslav-pasichnyk";
 import { YaroslavTsvykConfigLoaderService } from "./students/yaroslav-tsvyk";
@@ -18,6 +19,7 @@ export class MainConfigLoaderService {
       new YaroslavTsvykConfigLoaderService(),
       new OstapBlystsivConfigLoaderService(),
       new DenysZarubaConfigLoaderService(),
+      new VitaliiSynytskyiConfigLoaderService()
     ];
   }
 
