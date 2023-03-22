@@ -10,6 +10,8 @@ import { DenysZarubaConfigLoaderService } from "./students/denys-zaruba";
 import { VoievodaVladislavConfigLoaderService } from "./students/vlad-voievoda";
 import { IlliaChumakConfigLoaderService } from "./students/illia-chumak";
 import { NazarPohonchukConfigLoaderService } from "./students/nazar-pohonchuk";
+import { ArsenShvediukConfigLoaderService } from "./students/arsen-shvediuk";
+import { MalishVitaliyConfigLoaderService } from "./students/vitalii.malysh";
 import { ArsenShvediukConfigLoaderService } from "./students/arsen-shvediuk"; 
 import { VitaliyHavronaConfigLoaderService } from "./students/vitaliy-havrona";
 import { RuslanHavrilyakConfigLoaderService } from "./students/ruslan-havrilyak"; 
@@ -40,6 +42,7 @@ export class MainConfigLoaderService {
       new TarasRohulyaConfigLoaderService(),
       new OleksandrZhovanukConfigLoaderService(),
 	    new BohdanDzirbaConfigLoaderService(),
+      new MalishVitaliyConfigLoaderService(),
     ];
   }
 
