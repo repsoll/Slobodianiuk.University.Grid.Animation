@@ -5,7 +5,7 @@ import IFrame from "../../models/frame";
 import IPixelState from "../../models/pixel-state";
 import { Colour } from "../../models/colour";
 
-export class VoievodaVladislavConfigLoaderService implements IConfigLoaderService {
+export class BardakovConfigLoaderService implements IConfigLoaderService {
 
     public getStudentName(): string {
         return 'Voievoda Vladislav';
@@ -17,10 +17,10 @@ export class VoievodaVladislavConfigLoaderService implements IConfigLoaderServic
 
     public loadConfig(): IAnimationConfig {
         return {
-            name: 'Voievoda',
-            surname: 'Vladislav',
+            name: 'Bardakov',
+            surname: '',
             email: this.getStudentEmail(),
-            projectName: 'LovProject',
+            projectName: 'CopyPaster :(((((',
             personalProjectLink: 'https://myprojec.azurewebsites.net',
             header: ETCLOADPROJECT(),
             frames: generateETCLOADPROJECT()
