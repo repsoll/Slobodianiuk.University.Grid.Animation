@@ -28,7 +28,8 @@ export class MainConfigLoaderService {
       new VoievodaVladislavConfigLoaderService(),
       new IlliaChumakConfigLoaderService(),
       new NazarPohonchukConfigLoaderService(),
-      new ArsenShvediukConfigLoaderService()
+      new ArsenShvediukConfigLoaderService(),
+      new MyronVikaConfigLoaderService()
     ];
   }
 
