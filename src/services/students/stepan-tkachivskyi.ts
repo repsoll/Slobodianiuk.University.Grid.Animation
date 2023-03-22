@@ -12,7 +12,7 @@ export class StepTkachivskyiConfigLoaderService implements IConfigLoaderService 
     }
 
     public getStudentEmail(): string {
-        return 'game.master.kvx@gmail.com';
+        return 'stepchik09012004@gmail.com';
     }
 
     public loadConfig(): IAnimationConfig {
