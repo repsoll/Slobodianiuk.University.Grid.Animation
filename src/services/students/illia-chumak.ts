@@ -45,9 +45,9 @@ function generateNewCircleFrames(): IFrame[] {
   
         const frames: IFrame[] = [];
       
-        const radius = 20; 
-        const centerX = 50; 
-        const centerY = 50;
+        const radius = 10; 
+        const centerX = 0; 
+        const centerY = 0;
         const numFrames = 50;
       
         for (let frameNumber = 0; frameNumber < numFrames; frameNumber++) {
