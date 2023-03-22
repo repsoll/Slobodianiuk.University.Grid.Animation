@@ -20,7 +20,7 @@ export class StepTkachivskyiConfigLoaderService implements IConfigLoaderService 
             name: 'Stepan',
             surname: 'Tkachivskyi',
             email: this.getStudentEmail(),
-            projectName: 'UkrainItch.io',
+            projectName: 'Tankista',
             personalProjectLink: 'https://youtu.be/3xL4dOxGJXo?t=1865',
             header: {frameNumber:0, pixels: getHeaderFrame()},
             frames: generateUkrainItchFrames()
@@ -31,22 +31,60 @@ export class StepTkachivskyiConfigLoaderService implements IConfigLoaderService 
 
 function generateUkrainItchFrames(): IFrame[] {
     const frames: IFrame[] = [];
-    const squareSize = 6;
+
   
-    for (let frameNumber = 0; frameNumber < 60; frameNumber++) {
-      const pixels: IPixelState[] = [];
-  
-      for (let i = 0; i < squareSize; i++) {
-        pixels.push({ x: i, y: frameNumber, color: Colour.White });
-        pixels.push({ x: i, y: 59 - frameNumber, color: Colour.White });
-        pixels.push({ x: 59 - i, y: frameNumber, color: Colour.White });
-        pixels.push({ x: 59 - i, y: 59 - frameNumber, color: Colour.White });
-      }
-  
-      frames.push({
-        frameNumber: frameNumber,
-        pixels: pixels,
-      });
+    for (let frameNumber = 0; frameNumber < 19; frameNumber++) {
+        const result: IPixelState[] = [];
+
+
+        for (let y = 2; y < 14; y++) {
+            result.push({ x: 10, y: y, color: Colour.White });
+            result.push({ x: 11, y: y, color: Colour.White });
+        }
+
+        result.push({ x: 11, y: 14, color: Colour.White });
+        result.push({ x: 12, y: 2, color: Colour.White });
+        result.push({ x: 13, y: 3, color: Colour.White });
+        result.push({ x: 12, y: 13, color: Colour.White });
+        result.push({ x: 13, y: 13, color: Colour.White });
+
+        for (let y = 4; y < 13; y++) {
+            result.push({ x: 14, y: y, color: Colour.White });
+            if (y < 10){
+                result.push({ x: 7, y: y, color: Colour.White });}
+        }
+
+        result.push({ x: 8, y: 4, color: Colour.White });
+        result.push({ x: 9, y: 4, color: Colour.White });
+        result.push({ x: 8, y: 9, color: Colour.White });
+        result.push({ x: 9, y: 9, color: Colour.White });
+
+        result.push({ x: 4, y: 5, color: Colour.White });
+        result.push({ x: 5, y: 5, color: Colour.White });
+        result.push({ x: 6, y: 5, color: Colour.White });
+
+        result.push({ x: 4, y: 3, color: Colour.White });
+        result.push({ x: 4, y: 4, color: Colour.White });
+        result.push({ x: 5, y: 3, color: Colour.White });
+        result.push({ x: 5, y: 4, color: Colour.White });
+
+        result.push({ x: 8, y: 10, color: Colour.White });
+        result.push({ x: 8, y: 11, color: Colour.White });
+    
+    ///Animation
+
+        
+        result.push({ x: 0, y: 16 - frameNumber, color: Colour.White });
+        result.push({ x: 0, y: 16 - frameNumber + 1, color: Colour.White });
+        result.push({ x: 1, y: 16 - frameNumber + 1, color: Colour.White });
+        result.push({ x: 2, y: 16 - frameNumber + 1, color: Colour.White });
+        result.push({ x: 2, y: 16 - frameNumber, color: Colour.White });
+                
+        
+        frames.push({
+            frameNumber: frameNumber,
+            pixels: result,
+        });
     }
   
     return frames;
@@ -56,35 +94,40 @@ function generateUkrainItchFrames(): IFrame[] {
 function getHeaderFrame(): IPixelState[] {
     const result: IPixelState[] = [];
   
-    // Draw body
-    for (let x = 3; x < 13; x++) {
-      for (let y = 5; y < 11; y++) {
-        result.push({ x: x, y: y, color: Colour.White });
-      }
+    for (let y = 2; y < 14; y++) {
+        result.push({ x: 6, y: y, color: Colour.White });
+        result.push({ x: 7, y: y, color: Colour.White });
     }
-  
-    // Draw eyes
-    result.push({ x: 4, y: 6, color: Colour.White });
-    result.push({ x: 4, y: 6, color: Colour.Black });
-    result.push({ x: 10, y: 6, color: Colour.White });
-    result.push({ x: 10, y: 6, color: Colour.Black });
-  
-    // Draw mouth
-    result.push({ x: 6, y: 9, color: Colour.Black });
-    result.push({ x: 7, y: 10, color: Colour.Black });
-    result.push({ x: 8, y: 10, color: Colour.Black });
-    result.push({ x: 9, y: 9, color: Colour.Black });
-  
-    // Draw legs
-    for (let x = 4; x < 7; x++) {
-      result.push({ x: x, y: 11, color: Colour.White });
-      result.push({ x: x, y: 12, color: Colour.White });
+
+    result.push({ x: 7, y: 14, color: Colour.White });
+    result.push({ x: 8, y: 2, color: Colour.White });
+    result.push({ x: 9, y: 3, color: Colour.White });
+    result.push({ x: 8, y: 13, color: Colour.White });
+    result.push({ x: 9, y: 13, color: Colour.White });
+
+    for (let y = 4; y < 13; y++) {
+        result.push({ x: 10, y: y, color: Colour.White });
+        if (y < 10){
+            result.push({ x: 3, y: y, color: Colour.White });}
     }
-    for (let x = 9; x < 12; x++) {
-      result.push({ x: x, y: 11, color: Colour.White });
-      result.push({ x: x, y: 12, color: Colour.White });
-    }
-  
+
+    result.push({ x: 4, y: 4, color: Colour.White });
+    result.push({ x: 5, y: 4, color: Colour.White });
+    result.push({ x: 4, y: 9, color: Colour.White });
+    result.push({ x: 5, y: 9, color: Colour.White });
+
+    result.push({ x: 0, y: 5, color: Colour.White });
+    result.push({ x: 1, y: 5, color: Colour.White });
+    result.push({ x: 2, y: 5, color: Colour.White });
+
+    result.push({ x: 0, y: 3, color: Colour.White });
+    result.push({ x: 0, y: 4, color: Colour.White });
+    result.push({ x: 1, y: 3, color: Colour.White });
+    result.push({ x: 1, y: 4, color: Colour.White });
+
+    result.push({ x: 4, y: 10, color: Colour.White });
+    result.push({ x: 4, y: 11, color: Colour.White });
+
     return result;
   }
   
