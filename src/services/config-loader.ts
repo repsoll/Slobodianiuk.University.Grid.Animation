@@ -12,54 +12,61 @@ import { IlliaChumakConfigLoaderService } from "./students/illia-chumak";
 import { NazarPohonchukConfigLoaderService } from "./students/nazar-pohonchuk";
 import { ArsenShvediukConfigLoaderService } from "./students/arsen-shvediuk";
 import { MalishVitaliyConfigLoaderService } from "./students/vitalii.malysh";
+import { ArsenShvediukConfigLoaderService } from "./students/arsen-shvediuk"; 
+import { VitaliyHavronaConfigLoaderService } from "./students/vitaliy-havrona";
+import { RuslanHavrilyakConfigLoaderService } from "./students/ruslan-havrilyak"; 
+import { MyronVikaConfigLoaderService } from "./students/vika-myron"; 
+import { TarasRohulyaConfigLoaderService } from "./students/taras-rohulya"; 
+import { OleksandrZhovanukConfigLoaderService } from "./students/oleksandr-zhovanuk";
+import { BohdanDzirbaConfigLoaderService } from "./students/bohdan-dzirba"; 
 
 export class MainConfigLoaderService {
+  private services: IConfigLoaderService[];
 
-    private services: IConfigLoaderService[];
+  constructor() {
+    this.services = [
+      new AndriiSlobodianiukConfigLoaderService(),
+      new OleksandrZhukConfigLoaderService(),
+      new YaroslavPasichnykConfigLoaderService(),
+      new YaroslavTsvykConfigLoaderService(),
+      new OstapBlystsivConfigLoaderService(),
+      new DenysZarubaConfigLoaderService(),
+      new VitaliiSynytskyiConfigLoaderService(),
+      new VoievodaVladislavConfigLoaderService(),
+      new IlliaChumakConfigLoaderService(),
+      new NazarPohonchukConfigLoaderService(),
+      new ArsenShvediukConfigLoaderService(),
+      new VitaliyHavronaConfigLoaderService(),
+      new RuslanHavrilyakConfigLoaderService(),
+      new MyronVikaConfigLoaderService(),
+      new TarasRohulyaConfigLoaderService(),
+      new OleksandrZhovanukConfigLoaderService(),
+	    new BohdanDzirbaConfigLoaderService(),
+      new MalishVitaliyConfigLoaderService(),
+    ];
+  }
 
-    constructor() {
-        this.services = [
-            new AndriiSlobodianiukConfigLoaderService(),
-            new OleksandrZhukConfigLoaderService(),
-            new YaroslavPasichnykConfigLoaderService(),
-            new YaroslavTsvykConfigLoaderService(),
-            new OstapBlystsivConfigLoaderService(),
-            new DenysZarubaConfigLoaderService(),
-            new VitaliiSynytskyiConfigLoaderService(),
-            new VoievodaVladislavConfigLoaderService(),
-            new IlliaChumakConfigLoaderService(),
-            new NazarPohonchukConfigLoaderService(),
-            new ArsenShvediukConfigLoaderService(),
-            new MalishVitaliyConfigLoaderService()
-        ];
+  public loadAllConfigs(): IAnimationConfig[] {
+    const results = [];
+    let counter = 0;
+
+    for (const service of this.services) {
+      let name = "";
+      let email = "";
+
+      try {
+        name = service.getStudentName();
+        email = service.getStudentEmail();
+        const config = service.loadConfig();
+        config.id = counter.toString();
+
+        results.push(config);
+        counter++;
+      } catch (exc) {
+        console.error(`Error occured while processing student '${name}' - ${email}.`, exc);
+      }
     }
 
-
-    public loadAllConfigs(): IAnimationConfig[] {
-
-        const results = [];
-        let counter = 0;
-
-        for (const service of this.services) {
-
-            let name = '';
-            let email = '';
-
-            try {
-
-                name = service.getStudentName();
-                email = service.getStudentEmail();
-                const config = service.loadConfig();
-                config.id = counter.toString();
-
-                results.push(config);
-                counter++;
-
-            } catch (exc) {
-                console.error(`Error occured while processing student '${name}' - ${email}.`, exc);
-            }
-        }
-
-        return results;
-    }
+    return results;
+  }
 }
