@@ -12,6 +12,11 @@ import { IlliaChumakConfigLoaderService } from "./students/illia-chumak";
 import { NazarPohonchukConfigLoaderService } from "./students/nazar-pohonchuk";
 import { ArsenShvediukConfigLoaderService } from "./students/arsen-shvediuk"; 
 import { VitaliyHavronaConfigLoaderService } from "./students/vitaliy-havrona";
+import { RuslanHavrilyakConfigLoaderService } from "./students/ruslan-havrilyak"; 
+import { MyronVikaConfigLoaderService } from "./students/vika-myron"; 
+import { TarasRohulyaConfigLoaderService } from "./students/taras-rohulya"; 
+import { OleksandrZhovanukConfigLoaderService } from "./students/oleksandr-zhovanuk";
+import { BohdanDzirbaConfigLoaderService } from "./students/bohdan-dzirba"; 
 
 export class MainConfigLoaderService {
   private services: IConfigLoaderService[];
@@ -29,7 +34,12 @@ export class MainConfigLoaderService {
       new IlliaChumakConfigLoaderService(),
       new NazarPohonchukConfigLoaderService(),
       new ArsenShvediukConfigLoaderService(),
-      new VitaliyHavronaConfigLoaderService()
+      new VitaliyHavronaConfigLoaderService(),
+      new RuslanHavrilyakConfigLoaderService(),
+      new MyronVikaConfigLoaderService(),
+      new TarasRohulyaConfigLoaderService(),
+      new OleksandrZhovanukConfigLoaderService(),
+	    new BohdanDzirbaConfigLoaderService(),
     ];
   }
 
