@@ -13,6 +13,7 @@ import { NazarPohonchukConfigLoaderService } from "./students/nazar-pohonchuk";
 import { ArsenShvediukConfigLoaderService } from "./students/arsen-shvediuk";
 import { MalishVitaliyConfigLoaderService } from "./students/vitalii.malysh";
 import { ArsenShvediukConfigLoaderService } from "./students/arsen-shvediuk"; 
+import { DaniilHulchenkoLoaderService } from "./students/daniil-hulchenko";
 import { VitaliyHavronaConfigLoaderService } from "./students/vitaliy-havrona";
 import { RuslanHavrilyakConfigLoaderService } from "./students/ruslan-havrilyak"; 
 import { MyronVikaConfigLoaderService } from "./students/vika-myron"; 
@@ -35,6 +36,7 @@ export class MainConfigLoaderService {
       new VoievodaVladislavConfigLoaderService(),
       new IlliaChumakConfigLoaderService(),
       new NazarPohonchukConfigLoaderService(),
+      new DaniilHulchenkoLoaderService(),
       new ArsenShvediukConfigLoaderService(),
       new VitaliyHavronaConfigLoaderService(),
       new RuslanHavrilyakConfigLoaderService(),
