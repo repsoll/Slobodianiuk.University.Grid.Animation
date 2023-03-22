@@ -7,6 +7,7 @@ import { YaroslavPasichnykConfigLoaderService } from "./students/yaroslav-pasich
 import { YaroslavTsvykConfigLoaderService } from "./students/yaroslav-tsvyk";
 import { OstapBlystsivConfigLoaderService } from "./students/ostap-blystsiv";
 import { DenysZarubaConfigLoaderService } from "./students/denys-zaruba";
+import { NazarPohonchukConfigLoaderService } from "./students/nazar-pohonchuk";
 import { ArsenShvediukConfigLoaderService } from "./students/arsen-shvediuk"; 
 
 export class MainConfigLoaderService {
@@ -21,6 +22,7 @@ export class MainConfigLoaderService {
       new OstapBlystsivConfigLoaderService(),
       new DenysZarubaConfigLoaderService(),
       new VitaliiSynytskyiConfigLoaderService(),
+      new NazarPohonchukConfigLoaderService(),
       new ArsenShvediukConfigLoaderService()
     ];
   }
