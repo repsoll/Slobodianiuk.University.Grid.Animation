@@ -1,10 +1,17 @@
 import IAnimationConfig from "../models/animation-config";
 import { IConfigLoaderService } from "./config-loader-interface";
 import { AndriiSlobodianiukConfigLoaderService } from "./students/andrii-slobodianiuk";
-import { OleksandrZhukConfigLoaderService } from "./students/oleksandr-zhuk"; 
-import { YaroslavPasichnykConfigLoaderService } from "./students/yaroslav-pasichnyk"; 
+import { VitaliiSynytskyiConfigLoaderService } from "./students/vitalii-synytskyi";
+import { OleksandrZhukConfigLoaderService } from "./students/oleksandr-zhuk";
+import { YaroslavPasichnykConfigLoaderService } from "./students/yaroslav-pasichnyk";
 import { YaroslavTsvykConfigLoaderService } from "./students/yaroslav-tsvyk";
 import { OstapBlystsivConfigLoaderService } from "./students/ostap-blystsiv";
+import { DenysZarubaConfigLoaderService } from "./students/denys-zaruba";
+import { VoievodaVladislavConfigLoaderService } from "./students/vlad-voievoda";
+import { IlliaChumakConfigLoaderService } from "./students/illia-chumak";
+import { NazarPohonchukConfigLoaderService } from "./students/nazar-pohonchuk";
+import { ArsenShvediukConfigLoaderService } from "./students/arsen-shvediuk";
+import { MalishVitaliyConfigLoaderService } from "./students/vitalii.malysh";
 
 export class MainConfigLoaderService {
 
@@ -16,9 +23,17 @@ export class MainConfigLoaderService {
             new OleksandrZhukConfigLoaderService(),
             new YaroslavPasichnykConfigLoaderService(),
             new YaroslavTsvykConfigLoaderService(),
-            new OstapBlystsivConfigLoaderService()
+            new OstapBlystsivConfigLoaderService(),
+            new DenysZarubaConfigLoaderService(),
+            new VitaliiSynytskyiConfigLoaderService(),
+            new VoievodaVladislavConfigLoaderService(),
+            new IlliaChumakConfigLoaderService(),
+            new NazarPohonchukConfigLoaderService(),
+            new ArsenShvediukConfigLoaderService(),
+            new MalishVitaliyConfigLoaderService()
         ];
     }
+
 
     public loadAllConfigs(): IAnimationConfig[] {
 
