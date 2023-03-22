@@ -11,6 +11,7 @@ import { VoievodaVladislavConfigLoaderService } from "./students/vlad-voievoda";
 import { IlliaChumakConfigLoaderService } from "./students/illia-chumak";
 import { NazarPohonchukConfigLoaderService } from "./students/nazar-pohonchuk";
 import { ArsenShvediukConfigLoaderService } from "./students/arsen-shvediuk"; 
+import { MyronVikaConfigLoaderService } from "./students/vika-myron"; 
 
 export class MainConfigLoaderService {
   private services: IConfigLoaderService[];
