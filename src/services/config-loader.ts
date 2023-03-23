@@ -10,9 +10,21 @@ import { DenysZarubaConfigLoaderService } from "./students/denys-zaruba";
 import { VoievodaVladislavConfigLoaderService } from "./students/vlad-voievoda";
 import { IlliaChumakConfigLoaderService } from "./students/illia-chumak";
 import { NazarPohonchukConfigLoaderService } from "./students/nazar-pohonchuk";
-import { OleksandrZhovanukConfigLoaderService } from "./students/oleksandr-zhovanuk";
+import { MalishVitaliyConfigLoaderService } from "./students/vitalii.malysh";
 import { ArsenShvediukConfigLoaderService } from "./students/arsen-shvediuk";
-import { BohdanDzirbaConfigLoaderService } from "./students/bohdan-dzirba"; 
+import { DaniilHulchenkoLoaderService } from "./students/daniil-hulchenko";
+import { VitaliyHavronaConfigLoaderService } from "./students/vitaliy-havrona";
+import { RuslanHavrilyakConfigLoaderService } from "./students/ruslan-havrilyak";
+import { MyronVikaConfigLoaderService } from "./students/vika-myron";
+import { TarasRohulyaConfigLoaderService } from "./students/taras-rohulya";
+import { OleksandrZhovanukConfigLoaderService } from "./students/oleksandr-zhovanuk";
+import { BohdanDzirbaConfigLoaderService } from "./students/bohdan-dzirba";
+import { YaroslavHolovkoConfigLoaderService } from "./students/yaroslav-holovko";
+import { BardakovConfigLoaderService } from "./students/bardakov";
+import { VitaliLyloConfigLoaderService } from "./students/vitali-lylo";
+import { OlehGeriiConfigLoaderService } from "./students/oleh-gerii";
+import { DenysVelychkoConfigLoaderService } from "./students/denys-velychko";
+import { YuriiRobakConfigLoaderService } from "./students/yurii-robak";
 
 export class MainConfigLoaderService {
   private services: IConfigLoaderService[];
@@ -29,9 +41,21 @@ export class MainConfigLoaderService {
       new VoievodaVladislavConfigLoaderService(),
       new IlliaChumakConfigLoaderService(),
       new NazarPohonchukConfigLoaderService(),
+      new DaniilHulchenkoLoaderService(),
       new ArsenShvediukConfigLoaderService(),
+      new VitaliyHavronaConfigLoaderService(),
+      new RuslanHavrilyakConfigLoaderService(),
+      new MyronVikaConfigLoaderService(),
+      new TarasRohulyaConfigLoaderService(),
       new OleksandrZhovanukConfigLoaderService(),
-	    new BohdanDzirbaConfigLoaderService(),
+      new BohdanDzirbaConfigLoaderService(),
+      new MalishVitaliyConfigLoaderService(),
+      new YaroslavHolovkoConfigLoaderService(),
+      new BardakovConfigLoaderService(),
+      new VitaliLyloConfigLoaderService(),
+      new OlehGeriiConfigLoaderService(),
+      new DenysVelychkoConfigLoaderService(),
+      new YuriiRobakConfigLoaderService(),
     ];
   }
 
