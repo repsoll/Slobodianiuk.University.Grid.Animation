@@ -31,28 +31,39 @@ export class RuslanHavrilyakConfigLoaderService implements IConfigLoaderService 
 
 function generateWorkWiseFrames(): IFrame[] {
     const frames: IFrame[] = [];
-    const squareSize = 4;
-
-    for (let frameNumber = 0; frameNumber < 120; frameNumber++) {
+    const radius = 10;
+    const centerX = 15;
+    const centerY = 15;
+    const angleDelta = Math.PI / 15;
+    for (let i = 0; i < 30; i++) {
         const pixels: IPixelState[] = [];
-    const xOffset = Math.floor(frameNumber / 30) * squareSize;
-    const yOffset = (frameNumber % 30) < 15 ? 0 : squareSize;
-
-    for (let i = 0; i < squareSize; i++) {
-        pixels.push({ x: xOffset + i, y: yOffset, color: Colour.White });
-        pixels.push({ x: xOffset + squareSize - 1, y: yOffset + i, color: Colour.White });
-        pixels.push({ x: xOffset + squareSize - 1 - i, y: yOffset + squareSize - 1, color: Colour.White });
-        pixels.push({ x: xOffset, y: yOffset + squareSize - 1 - i, color: Colour.White });
+        const angle = i * angleDelta;
+        const x = centerX + Math.cos(angle) * radius;
+        const y = centerY + Math.sin(angle) * radius;
+    
+        for (let pixelX = 0; pixelX < 30; pixelX++) {
+            for (let pixelY = 0; pixelY < 30; pixelY++) {
+                const distance = Math.sqrt((pixelX - x) ** 2 + (pixelY - y) ** 2);
+    
+                if (distance <= radius) {
+                    pixels.push({ x: pixelX, y: pixelY, color: Colour.White });
+    
+                    // додали перевірку, чи піксель знаходиться в середині монети
+                    if (distance <= 2) { 
+                        pixels[pixels.length - 1].color = Colour.Black; // встановлюємо колір пікселя на чорний, щоб намалювати одиничку
+                    }
+                }
+            }
+        }
+    
+        frames.push({
+            frameNumber: i,
+            pixels: pixels,
+        });
     }
-
-    frames.push({
-        frameNumber: frameNumber,
-        pixels: pixels,
-    });
-}
-
-return frames;
-}
+    
+    return frames;
+}    
 
 function getHeaderFrame(): IPixelState[] {
     const result: IPixelState[] = [];
@@ -67,6 +78,12 @@ function getHeaderFrame(): IPixelState[] {
 
     for (let x = 4; x < 14; x += 2) {
       result.push({ x: x, y: 11, color: Colour.White });
+    }
+    for (let x = 8; x < 16; x += 2) {
+        result.push({ x: x, y: 5, color: Colour.White });
+    }
+    for (let x = 12; x < 20; x += 2) {
+        result.push({ x: x, y: 14, color: Colour.White });
     }
   
     return result;
