@@ -65,7 +65,7 @@ export class ZakalaOleksandrConfigLoaderService implements IConfigLoaderService 
       email: this.getStudentEmail(),
       projectName: 'Shield',
       personalProjectLink: 'https://google.com',
-      header: Constants.DefaultConfig.header,
+      header: createHeartRecommenderHeader(),
       frames: generateFrames(),
     };
   }
@@ -151,4 +151,12 @@ function generateFrames(): IFrame[] {
   }
 
   return frames;
+}
+
+
+function createHeartRecommenderHeader(): IFrame {
+  return {
+    frameNumber: 0,
+    pixels: shield_data,
+  };
 }
