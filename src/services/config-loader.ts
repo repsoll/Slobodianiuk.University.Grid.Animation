@@ -22,6 +22,13 @@ import { BohdanDzirbaConfigLoaderService } from "./students/bohdan-dzirba";
 import { YaroslavHolovkoConfigLoaderService } from "./students/yaroslav-holovko";
 import { BardakovConfigLoaderService } from "./students/bardakov";
 import { LozoviiTarasConfigLoaderService } from "./students/taras-lozovii";
+import { NazarYarishConfigLoaderService } from "./students/nazar-yarish";
+import { StepTkachivskyiConfigLoaderService } from "./students/stepan-tkachivskyi";
+import { VitaliLyloConfigLoaderService } from "./students/vitali-lylo";
+import { OlehGeriiConfigLoaderService } from "./students/oleh-gerii";
+import { DenysVelychkoConfigLoaderService } from "./students/denys-velychko";
+import { YuriiRobakConfigLoaderService } from "./students/yurii-robak";
+import { OlesandrBiletskyiConfigLoaderService } from "./students/oleksandr-biletskyi";
 
 export class MainConfigLoaderService {
   private services: IConfigLoaderService[];
@@ -49,7 +56,14 @@ export class MainConfigLoaderService {
       new MalishVitaliyConfigLoaderService(),
       new YaroslavHolovkoConfigLoaderService(),
       new BardakovConfigLoaderService(),
-      new LozoviiTarasConfigLoaderService()
+      new LozoviiTarasConfigLoaderService(),
+      new NazarYarishConfigLoaderService(),
+      new StepTkachivskyiConfigLoaderService(),
+      new VitaliLyloConfigLoaderService(),
+      new OlehGeriiConfigLoaderService(),
+      new DenysVelychkoConfigLoaderService(),
+      new YuriiRobakConfigLoaderService(),
+      new OlesandrBiletskyiConfigLoaderService(),
     ];
   }
 
