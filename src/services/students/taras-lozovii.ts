@@ -20,7 +20,7 @@ export class LozoviiTarasConfigLoaderService implements IConfigLoaderService {
             name: 'Taras',
             surname: 'Lozovii',
             email: this.getStudentEmail(),
-            projectName: 'LovProject',
+            projectName: 'CopyPaster :(((((',
             personalProjectLink: '',
             header: {frameNumber:0, pixels: getHeaderFrame()},
             frames: generatemyProjectFrames()
@@ -89,11 +89,11 @@ function generatemyProjectFrames(): IFrame[] {
 }
 function getHeaderFrame(): IPixelState[] {
     const result: IPixelState[] = [];
-  
+
     for (let x = 2; x < 14; x++) {
       result.push({ x: x, y: 3, color: Colour.White });
     }
-  
+
     for (let y = 4; y < 11; y += 2) {
       result.push({ x: 2, y: y, color: Colour.White });
     }
@@ -101,6 +101,6 @@ function getHeaderFrame(): IPixelState[] {
     for (let x = 3; x < 13; x += 2) {
       result.push({ x: x, y: 11, color: Colour.White });
     }
-  
+
     return result;
 }

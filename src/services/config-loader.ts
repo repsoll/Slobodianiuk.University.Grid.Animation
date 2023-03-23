@@ -33,6 +33,8 @@ import { YuriiRobakConfigLoaderService } from "./students/yurii-robak";
 import { OlesandrBiletskyiConfigLoaderService } from "./students/oleksandr-biletskyi";
 import { OlehSuvorovConfigLoaderService } from "./students/oleh-suvorov";
 import { KoarizVolodymyrConfigLoaderService } from "./students/volodymyr-kozariz";
+import { OlehMuzychukConfigLoaderService } from "./students/oleh-muzychuk";
+import { OleksiiPylypenkoConfigLoaderService } from "./students/oleksii-pylypenko";
 import { MykhailoHorpyniukConfigLoaderService } from "./students/mykhailo-horpyniuk";
 
 export class MainConfigLoaderService {
@@ -40,7 +42,6 @@ export class MainConfigLoaderService {
 
   constructor() {
     this.services = [
-      new MykhailoHorpyniukConfigLoaderService(),
       new AndriiSlobodianiukConfigLoaderService(),
       new OleksandrZhukConfigLoaderService(),
       new YaroslavPasichnykConfigLoaderService(),
@@ -73,7 +74,10 @@ export class MainConfigLoaderService {
       new YuriiRobakConfigLoaderService(),
       new OlesandrBiletskyiConfigLoaderService(),
       new OlehSuvorovConfigLoaderService(),
-      new KoarizVolodymyrConfigLoaderService()
+      new KoarizVolodymyrConfigLoaderService(),
+      new OlehMuzychukConfigLoaderService(),
+      new OleksiiPylypenkoConfigLoaderService(),
+      new KoarizVolodymyrConfigLoaderService(),
     ];
   }
 

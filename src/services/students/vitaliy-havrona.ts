@@ -1,13 +1,11 @@
 import IAnimationConfig from "../../models/animation-config";
 import { IConfigLoaderService } from "../config-loader-interface";
 import Constants from "../../constants/constants";
-import { Colour } from "../../models/colour";
 import IFrame from "../../models/frame";
 import IPixelState from "../../models/pixel-state";
+import { Colour } from "../../models/colour";
 
-export class VitaliyHavronaConfigLoaderService
-  implements IConfigLoaderService
-{
+export class VitaliyHavronaConfigLoaderService implements IConfigLoaderService {
   public getStudentName(): string {
     return "Vitaliy Havrona";
   }
@@ -21,63 +19,85 @@ export class VitaliyHavronaConfigLoaderService
       name: "Vitaliy",
       surname: "Havrona",
       email: this.getStudentEmail(),
-      projectName: "Sharp",
-      personalProjectLink: "https://monolite.azurewebsites.net",
-      header: showHeader() ,
-      frames: [...Array(32).keys()].map((x) => getSharpOnFrame(x)),
+      projectName: "Heart",
+      personalProjectLink: "https://taras-rails-app.fly.dev/",
+      header: Avatar(0),
+      frames: generateFrames(),
     };
   }
 }
-
-function showHeader(): IFrame {
-  const frame: IFrame = {
-    frameNumber: 0,
-    pixels: [],
-  };
-
-  for (let x = 0; x < 32; x++) {
-    for (let y = 0; y < 16; y++) {
-      // Calculate the position of the pixel based on the frame number
-      const yPos = y - (0 - x);
-
-      // Add a white pixel to the frame if it's within bounds
-      if (yPos >= 0 && yPos < 16) {
-        frame.pixels.push({ x, y: yPos, color: Colour.White });
-      }
-    }
-  }
-  return frame;
-}
-
- const getSharpOnFrame = (frameNumber: number): IFrame => {
+const Avatar = (frameNumber: number): IFrame => {
   let result: IFrame = {
     frameNumber: frameNumber,
     pixels: [],
   };
 
-  const midX = Math.floor(Constants.GridColumns / 2);
-  const midY = Math.floor(Constants.GridRows / 2);
+  result.pixels.push(
+    // N
 
-  for (let x = midX - 4; x <= midX + 3; x++) {
-    for (let y = midY - 4; y <= midY + 3; y++) {
-      const isVerticalLine = x === midX - 2 || x === midX + 1;
-      const isHorizontalLine = y === midY - 2 || y === midY + 1;
-
-      if (isVerticalLine || isHorizontalLine) {
-        result.pixels.push({
-          color: Colour.White,
-          x: x,
-          y: y,
-        });
-      } else {
-        result.pixels.push({
-          color: Colour.Black,
-          x: x,
-          y: y,
-        });
-      }
-    }
-  }
+    // left side of the heart
+    { x: 2, y: 5, color: Colour.White },
+    { x: 2, y: 6, color: Colour.White },
+    { x: 3, y: 7, color: Colour.White },
+    { x: 2, y: 8, color: Colour.White },
+    { x: 2, y: 9, color: Colour.White },
+    { x: 3, y: 10, color: Colour.White },
+    { x: 4, y: 10, color: Colour.White },
+    { x: 5, y: 10, color: Colour.White },
+    { x: 6, y: 9, color: Colour.White },
+    { x: 7, y: 8, color: Colour.White },
+    { x: 8, y: 7, color: Colour.White },
+    { x: 3, y: 4, color: Colour.White },
+    { x: 4, y: 4, color: Colour.White },
+    { x: 5, y: 4, color: Colour.White },
+    { x: 6, y: 5, color: Colour.White },
+    { x: 7, y: 6, color: Colour.White },
+  );
 
   return result;
 };
+function generateFrames(): IFrame[] {
+  const frames: IFrame[] = [];
+
+  const VitaliyHavronaConfigLoaderService: IPixelState[] = [
+    // left side of the heart
+    { x: 2, y: 5, color: Colour.White },
+    { x: 2, y: 6, color: Colour.White },
+    { x: 3, y: 7, color: Colour.White },
+    { x: 2, y: 8, color: Colour.White },
+    { x: 2, y: 9, color: Colour.White },
+    { x: 3, y: 10, color: Colour.White },
+    { x: 4, y: 10, color: Colour.White },
+    { x: 5, y: 10, color: Colour.White },
+    { x: 6, y: 9, color: Colour.White },
+    { x: 7, y: 8, color: Colour.White },
+    { x: 8, y: 7, color: Colour.White },
+    { x: 3, y: 4, color: Colour.White },
+    { x: 4, y: 4, color: Colour.White },
+    { x: 5, y: 4, color: Colour.White },
+    { x: 6, y: 5, color: Colour.White },
+    { x: 7, y: 6, color: Colour.White },
+  ];
+
+  for (let frameNumber = 0; frameNumber < 40; frameNumber++) {
+    const pixels: IPixelState[] = [];
+
+    const showCar = frameNumber + 100;
+    const slide = frameNumber - 20;
+
+    if (showCar) {
+      pixels.push(
+        ...VitaliyHavronaConfigLoaderService.map((pixel) => ({
+          ...pixel,
+          x: pixel.x - slide,
+          color: Colour.White,
+        })),
+      );
+    }
+    frames.push({
+      frameNumber: frameNumber,
+      pixels: pixels,
+    });
+  }
+  return frames;
+}
