@@ -4,6 +4,7 @@ import Constants from "../../constants/constants";
 import IFrame from "../../models/frame";
 import IPixelState from "../../models/pixel-state";
 import { Colour } from "../../models/colour";
+import { color } from "@mui/system";
 
 export class OleksandrZhovanukConfigLoaderService implements IConfigLoaderService {
   public getStudentName(): string {
@@ -86,11 +87,27 @@ function generatePenFrames(): IFrame[] {
     { x: 6, y: 2, color: Colour.White },
   ];
 
-  for (let frameNumber = 0; frameNumber < Constants.MaxTotalFrames; frameNumber++) {
+  for (let frameNumber = 0; frameNumber < 16; frameNumber++) {
     const pixels: IPixelState[] = [];
 
-    const penX = frameNumber % (30);
-    pixels.push(...pen.map((pixel) => ({ ...pixel, y: pixel.y + penX, color: Colour.White })))
+    
+    let penX = 0
+    const penY = frameNumber % (30);
+    if (frameNumber % 2 == 0){
+      penX = -1
+    }
+    else{
+      penX = 0
+    }
+
+    pixels.push(...pen.map((pixel , index) : IPixelState => {
+      if(index < 13){
+        return ({...pixel, y: pixel.y + penY , x: pixel.x + penX})
+    }
+    return {...pixel}
+    }))
+
+    pen.push({ x: 8 + penX, y: frameNumber, color: Colour.White })
     
 
     frames.push({
