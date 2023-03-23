@@ -61,7 +61,6 @@ export class MainConfigLoaderService {
       new YaroslavHolovkoConfigLoaderService(),
       new BardakovConfigLoaderService(),
       new ZakalaOleksandrConfigLoaderService(),
-      new BardakovConfigLoaderService(),
       new ValeriymanuilykConfigLoaderService(),
       new LozoviiTarasConfigLoaderService(),
       new NazarYarishConfigLoaderService(),
