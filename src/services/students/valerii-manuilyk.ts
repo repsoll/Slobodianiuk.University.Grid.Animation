@@ -22,7 +22,7 @@ export class  ValeriymanuilykConfigLoaderService implements IConfigLoaderService
             surname: 'Manuilyk',
             email: this.getStudentEmail(),
             projectName: 'Dollar',
-            personalProjectLink: 'https://tachka.azurewebsites.net/',
+            personalProjectLink: 'https://dollar.azurewebsites.net/',
             header: Avatar(0),
             frames: generateFrames()
         }
@@ -36,9 +36,75 @@ const Avatar = (frameNumber: number): IFrame => {
     };
 
     result.pixels.push(
-        { x: 2, y: 6, color: Colour.White },  
-        
-        { x: 5, y: 13, color: Colour.White },);
+        { x: 1, y: 4, color: Colour.White },
+        { x: 1, y: 5, color: Colour.White },  
+        { x: 1, y: 6, color: Colour.White },  
+        { x: 1, y: 7, color: Colour.White },  
+        { x: 1, y: 8, color: Colour.White },  
+        { x: 1, y: 9, color: Colour.White },
+        { x: 1, y: 10, color: Colour.White },     
+        { x: 2, y: 3, color: Colour.White },
+        { x: 2, y: 11, color: Colour.White },
+        { x: 3, y: 2, color: Colour.White },
+        { x: 3, y: 7, color: Colour.White },   
+        { x: 3, y: 12, color: Colour.White },
+        { x: 4, y: 1, color: Colour.White },
+        { x: 4, y: 5, color: Colour.White }, 
+        { x: 4, y: 6, color: Colour.White }, 
+        { x: 4, y: 7, color: Colour.White }, 
+        { x: 4, y: 8, color: Colour.White }, 
+        { x: 4, y: 9, color: Colour.White }, 
+        { x: 4, y: 13, color: Colour.White },
+        { x: 5, y: 1, color: Colour.White },
+        { x: 5, y: 4, color: Colour.White }, 
+        { x: 5, y: 7, color: Colour.White }, 
+        { x: 5, y: 13, color: Colour.White },
+        { x: 6, y: 1, color: Colour.White },
+        { x: 6, y: 4, color: Colour.White }, 
+        { x: 6, y: 7, color: Colour.White }, 
+        { x: 6, y: 13, color: Colour.White },
+        { x: 7, y: 1, color: Colour.White }, 
+        { x: 7, y: 4, color: Colour.White }, 
+        { x: 7, y: 7, color: Colour.White }, 
+        { x: 7, y: 13, color: Colour.White },
+        { x: 8, y: 1, color: Colour.White }, 
+        { x: 8, y: 5, color: Colour.White }, 
+        { x: 8, y: 6, color: Colour.White }, 
+        { x: 8, y: 7, color: Colour.White }, 
+        { x: 8, y: 8, color: Colour.White }, 
+        { x: 8, y: 9, color: Colour.White }, 
+        { x: 8, y: 13, color: Colour.White },
+        { x: 9, y: 1, color: Colour.White },
+        { x: 9, y: 7, color: Colour.White }, 
+        { x: 9, y: 10, color: Colour.White }, 
+        { x: 9, y: 13, color: Colour.White },
+        { x: 10, y: 1, color: Colour.White }, 
+        { x: 10, y: 7, color: Colour.White }, 
+        { x: 10, y: 10, color: Colour.White }, 
+        { x: 10, y: 13, color: Colour.White }, 
+        { x: 11, y: 1, color: Colour.White }, 
+        { x: 11, y: 7, color: Colour.White }, 
+        { x: 11, y: 10, color: Colour.White }, 
+        { x: 11, y: 13, color: Colour.White }, 
+        { x: 12, y: 1, color: Colour.White }, 
+        { x: 12, y: 5, color: Colour.White }, 
+        { x: 12, y: 6, color: Colour.White }, 
+        { x: 12, y: 7, color: Colour.White }, 
+        { x: 12, y: 8, color: Colour.White }, 
+        { x: 12, y: 9, color: Colour.White }, 
+        { x: 12, y: 13, color: Colour.White },
+        { x: 13, y: 2, color: Colour.White }, 
+        { x: 13, y: 7, color: Colour.White }, 
+        { x: 13, y: 13, color: Colour.White },  
+        { x: 14, y: 3, color: Colour.White }, 
+        { x: 14, y: 11, color: Colour.White }, 
+        { x: 15, y: 4, color: Colour.White }, 
+        { x: 15, y: 5, color: Colour.White }, 
+        { x: 15, y: 6, color: Colour.White }, 
+        { x: 15, y: 7, color: Colour.White }, 
+        { x: 15, y: 8, color: Colour.White }, 
+        { x: 15, y: 9, color: Colour.White },                 
+        { x: 15, y: 10, color: Colour.White },);
 
     return result;
 }
@@ -46,7 +112,15 @@ function generateFrames(): IFrame[] {
     const frames: IFrame[] = [];
 
     const Dollar: IPixelState[] = [
-        
+        { x: 1, y: 4, color: Colour.White }, { x: 1, y: 5, color: Colour.White },{ x: 1, y: 6, color: Colour.White }, { x: 1, y: 7, color: Colour.White },  { x: 1, y: 8, color: Colour.White },  { x: 1, y: 9, color: Colour.White },{ x: 1, y: 10, color: Colour.White },
+        { x: 1, y: 10, color: Colour.White },     { x: 2, y: 3, color: Colour.White },{ x: 2, y: 11, color: Colour.White },{ x: 3, y: 2, color: Colour.White },{ x: 3, y: 7, color: Colour.White }, { x: 3, y: 12, color: Colour.White },{ x: 4, y: 1, color: Colour.White },
+        { x: 4, y: 5, color: Colour.White }, { x: 4, y: 6, color: Colour.White },  { x: 4, y: 7, color: Colour.White },{ x: 4, y: 8, color: Colour.White }, { x: 4, y: 9, color: Colour.White }, { x: 4, y: 13, color: Colour.White },{ x: 5, y: 1, color: Colour.White },{ x: 5, y: 4, color: Colour.White }, { x: 5, y: 7, color: Colour.White }, { x: 5, y: 13, color: Colour.White },{ x: 6, y: 1, color: Colour.White },{ x: 6, y: 4, color: Colour.White },  { x: 6, y: 7, color: Colour.White }, 
+        { x: 6, y: 13, color: Colour.White },{ x: 7, y: 1, color: Colour.White }, { x: 7, y: 4, color: Colour.White },{ x: 7, y: 7, color: Colour.White }, { x: 7, y: 13, color: Colour.White },{ x: 8, y: 1, color: Colour.White }, { x: 8, y: 5, color: Colour.White }, { x: 8, y: 6, color: Colour.White }, { x: 8, y: 7, color: Colour.White }, { x: 8, y: 8, color: Colour.White }, { x: 8, y: 9, color: Colour.White }, { x: 8, y: 13, color: Colour.White },
+        { x: 9, y: 1, color: Colour.White },{ x: 9, y: 7, color: Colour.White }, { x: 9, y: 10, color: Colour.White }, { x: 9, y: 13, color: Colour.White },
+        { x: 10, y: 1, color: Colour.White }, { x: 10, y: 7, color: Colour.White }, { x: 10, y: 10, color: Colour.White },  { x: 10, y: 13, color: Colour.White }, { x: 11, y: 1, color: Colour.White }, { x: 11, y: 7, color: Colour.White }, { x: 11, y: 10, color: Colour.White },  { x: 11, y: 13, color: Colour.White }, 
+        { x: 12, y: 1, color: Colour.White }, { x: 12, y: 5, color: Colour.White }, { x: 12, y: 6, color: Colour.White }, { x: 12, y: 7, color: Colour.White }, { x: 12, y: 8, color: Colour.White }, { x: 12, y: 9, color: Colour.White }, { x: 12, y: 13, color: Colour.White },
+        { x: 13, y: 2, color: Colour.White }, { x: 13, y: 7, color: Colour.White }, { x: 13, y: 12, color: Colour.White },   { x: 14, y: 3, color: Colour.White }, { x: 14, y: 11, color: Colour.White }, { x: 15, y: 4, color: Colour.White },  { x: 15, y: 5, color: Colour.White }, { x: 15, y: 6, color: Colour.White }, { x: 15, y: 7, color: Colour.White }, 
+        { x: 15, y: 8, color: Colour.White },  { x: 15, y: 9, color: Colour.White },{ x: 15, y: 10, color: Colour.White },
     ];
 
 
