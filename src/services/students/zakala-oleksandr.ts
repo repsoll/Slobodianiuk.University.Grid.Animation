@@ -109,9 +109,6 @@ function update_pixels(pixels1: IPixelState[], pixels2: IPixelState[], new_color
 }
 
 
-
-
-
 function generateFrames(): IFrame[] {
   const frames: IFrame[] = [];
   let fc = 0
