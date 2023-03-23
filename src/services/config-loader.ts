@@ -34,6 +34,7 @@ import { OlesandrBiletskyiConfigLoaderService } from "./students/oleksandr-bilet
 import { OlehSuvorovConfigLoaderService } from "./students/oleh-suvorov";
 import { KoarizVolodymyrConfigLoaderService } from "./students/volodymyr-kozariz";
 import { OlehMuzychukConfigLoaderService } from "./students/oleh-muzychuk";
+import { OleksiiPylypenkoConfigLoaderService } from "./students/oleksii-pylypenko";
 
 export class MainConfigLoaderService {
   private services: IConfigLoaderService[];
@@ -73,7 +74,8 @@ export class MainConfigLoaderService {
       new OlesandrBiletskyiConfigLoaderService(),
       new OlehSuvorovConfigLoaderService(),
       new KoarizVolodymyrConfigLoaderService(),
-      new OlehMuzychukConfigLoaderService()
+      new OlehMuzychukConfigLoaderService(),
+      new OleksiiPylypenkoConfigLoaderService()
     ];
   }
 
