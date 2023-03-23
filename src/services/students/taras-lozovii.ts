@@ -12,7 +12,7 @@ export class LozoviiTarasConfigLoaderService implements IConfigLoaderService {
     }
 
     public getStudentEmail(): string {
-        return 'lozoviitaras777@gmail.com';
+        return 'lozoviitaras777@gmail.com'; 
     }
 
     public loadConfig(): IAnimationConfig {
@@ -20,87 +20,113 @@ export class LozoviiTarasConfigLoaderService implements IConfigLoaderService {
             name: 'Taras',
             surname: 'Lozovii',
             email: this.getStudentEmail(),
-            projectName: 'CopyPaster :(((((',
+            projectName: 'Sniper Vision',
             personalProjectLink: '',
-            header: {frameNumber:0, pixels: getHeaderFrame()},
-            frames: generatemyProjectFrames()
+            header: Avatar(0),
+            frames: generateFrames() 
         }
     }
 
 }
-function generatemyProjectFrames(): IFrame[] {
-    const frames: IFrame[] = [];
+const Avatar = (frameNumber: number): IFrame => {
+    let result: IFrame = {
+        frameNumber: frameNumber, 
+        pixels: []
+    };
 
-    const circle: IPixelState[] = [
-        { x: 5, y: 5, color: Colour.White },
-        { x: 6, y: 5, color: Colour.White },
-        { x: 7, y: 5, color: Colour.White },
-        { x: 5, y: 6, color: Colour.White },
-        { x: 7, y: 6, color: Colour.White },
-        { x: 5, y: 7, color: Colour.White },
+    result.pixels.push(
+        { x: 8, y: 5, color: Colour.White },
+        { x: 8, y: 6, color: Colour.White },
+        { x: 8, y: 7, color: Colour.White },
+        { x: 8, y: 8, color: Colour.White },
+        { x: 8, y: 9, color: Colour.White },
+        { x: 8, y: 10, color: Colour.White },
+        { x: 8, y: 11, color: Colour.White },
+        { x: 8, y: 12, color: Colour.White },
+        { x: 8, y: 13, color: Colour.White },
+        { x: 4, y: 9, color: Colour.White },
+        { x: 5, y: 9, color: Colour.White },
+        { x: 6, y: 9, color: Colour.White },
+        { x: 7, y: 9, color: Colour.White },
+        { x: 8, y: 9, color: Colour.White },
+        { x: 9, y: 9, color: Colour.White },
+        { x: 10, y: 9, color: Colour.White },
+        { x: 11, y: 9, color: Colour.White },
+        { x: 12, y: 9, color: Colour.White },
+        { x: 6, y: 8, color: Colour.White },
         { x: 6, y: 7, color: Colour.White },
         { x: 7, y: 7, color: Colour.White },
-    ];
+        { x: 9, y: 7, color: Colour.White },
+        { x: 10, y: 7, color: Colour.White },
+        { x: 10, y: 8, color: Colour.White },
+        { x: 10, y: 10, color: Colour.White },
+        { x: 10, y: 11, color: Colour.White },
+        { x: 9, y: 11, color: Colour.White },
+        { x: 7, y: 11, color: Colour.White },
+        { x: 6, y: 11, color: Colour.White },
+        { x: 6, y: 10, color: Colour.White },
 
-    const square: IPixelState[] = [
-        { x: 10, y: 5, color: Colour.Black },
-        { x: 11, y: 5, color: Colour.Black },
-        { x: 10, y: 6, color: Colour.Black },
-        { x: 11, y: 6, color: Colour.Black },
-    ];
+        );
+        
 
-    const triangle: IPixelState[] = [
-        { x: 15, y: 5, color: Colour.White },
-        { x: 14, y: 6, color: Colour.White },
-        { x: 15, y: 6, color: Colour.White },
-        { x: 16, y: 6, color: Colour.White },
-        { x: 13, y: 7, color: Colour.White },
-        { x: 14, y: 7, color: Colour.White },
-        { x: 15, y: 7, color: Colour.White },
-        { x: 16, y: 7, color: Colour.White },
-        { x: 17, y: 7, color: Colour.White },
-    ];
+    return result;
+}
+function generateFrames(): IFrame[] {
+    const frames: IFrame[] = [];
 
-    for (let frameNumber = 0; frameNumber < Constants.MaxTotalFrames; frameNumber++) {
+    const gg: IPixelState[] = [
+        { x: 8, y: 5, color: Colour.White },
+        { x: 8, y: 6, color: Colour.White },
+        { x: 8, y: 7, color: Colour.White },
+        { x: 8, y: 8, color: Colour.White },
+        { x: 8, y: 9, color: Colour.White },
+        { x: 8, y: 10, color: Colour.White },
+        { x: 8, y: 11, color: Colour.White },
+        { x: 8, y: 12, color: Colour.White },
+        { x: 8, y: 13, color: Colour.White },
+        { x: 4, y: 9, color: Colour.White },
+        { x: 5, y: 9, color: Colour.White },
+        { x: 6, y: 9, color: Colour.White },
+        { x: 7, y: 9, color: Colour.White },
+        { x: 8, y: 9, color: Colour.White },
+        { x: 9, y: 9, color: Colour.White },
+        { x: 10, y: 9, color: Colour.White },
+        { x: 11, y: 9, color: Colour.White },
+        { x: 12, y: 9, color: Colour.White },
+        { x: 6, y: 8, color: Colour.White },
+        { x: 6, y: 7, color: Colour.White },
+        { x: 7, y: 7, color: Colour.White },
+        { x: 9, y: 7, color: Colour.White },
+        { x: 10, y: 7, color: Colour.White },
+        { x: 10, y: 8, color: Colour.White },
+        { x: 10, y: 10, color: Colour.White },
+        { x: 10, y: 11, color: Colour.White },
+        { x: 9, y: 11, color: Colour.White },
+        { x: 7, y: 11, color: Colour.White },
+        { x: 6, y: 11, color: Colour.White },
+        { x: 6, y: 10, color: Colour.White },
+
+    ]
+
+
+    for (let frameNumber = 0; frameNumber < 40; frameNumber++) {
         const pixels: IPixelState[] = [];
 
-        const showCircle = frameNumber % 30 < 10;
-        const showSquare = frameNumber % 30 >= 10 && frameNumber % 30 < 20;
-        const showTriangle = frameNumber % 30 >= 20;
-        const slideInOffset = (frameNumber % 10) - 5;
+        const wp = frameNumber  +100;
+        const slide = frameNumber -20 ;
 
-        if (showCircle) {
-            pixels.push(...circle.map(pixel => ({ ...pixel, x: pixel.x + slideInOffset, color: Colour.White })));
+        if (wp) {
+            pixels.push(...gg.map(pixel => ({ ...pixel, x: pixel.x - slide, color: Colour.White })));
         }
-        if (showSquare) {
-            pixels.push(...square.map(pixel => ({ ...pixel, x: pixel.x + slideInOffset, color: Colour.Black })));
-        }
-        if (showTriangle) {
-            pixels.push(...triangle.map(pixel => ({ ...pixel, x: pixel.x - slideInOffset, color: Colour.White })));
-        }
+        
 
         frames.push({
             frameNumber: frameNumber,
             pixels: pixels,
         });
+
+       
     }
 
     return frames;
-}
-function getHeaderFrame(): IPixelState[] {
-    const result: IPixelState[] = [];
-
-    for (let x = 2; x < 14; x++) {
-      result.push({ x: x, y: 3, color: Colour.White });
-    }
-
-    for (let y = 4; y < 11; y += 2) {
-      result.push({ x: 2, y: y, color: Colour.White });
-    }
-
-    for (let x = 3; x < 13; x += 2) {
-      result.push({ x: x, y: 11, color: Colour.White });
-    }
-
-    return result;
 }
