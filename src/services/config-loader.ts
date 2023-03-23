@@ -21,6 +21,7 @@ import { OleksandrZhovanukConfigLoaderService } from "./students/oleksandr-zhova
 import { BohdanDzirbaConfigLoaderService } from "./students/bohdan-dzirba";
 import { YaroslavHolovkoConfigLoaderService } from "./students/yaroslav-holovko";
 import { BardakovConfigLoaderService } from "./students/bardakov";
+import { VitaliLyloConfigLoaderService } from "./students/vitali-lylo";
 import { OlehGeriiConfigLoaderService } from "./students/oleh-gerii";
 import { DenysVelychkoConfigLoaderService } from "./students/denys-velychko";
 import { YuriiRobakConfigLoaderService } from "./students/yurii-robak";
@@ -51,6 +52,7 @@ export class MainConfigLoaderService {
       new MalishVitaliyConfigLoaderService(),
       new YaroslavHolovkoConfigLoaderService(),
       new BardakovConfigLoaderService(),
+      new VitaliLyloConfigLoaderService(),
       new OlehGeriiConfigLoaderService(),
       new DenysVelychkoConfigLoaderService(),
       new YuriiRobakConfigLoaderService(),
