@@ -77,7 +77,7 @@ export class MainConfigLoaderService {
       new KoarizVolodymyrConfigLoaderService(),
       new OlehMuzychukConfigLoaderService(),
       new OleksiiPylypenkoConfigLoaderService(),
-      new KoarizVolodymyrConfigLoaderService(),
+      new MykhailoHorpyniukConfigLoaderService(),
     ];
   }
 
