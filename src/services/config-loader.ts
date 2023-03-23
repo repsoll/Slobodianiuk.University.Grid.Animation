@@ -7,6 +7,7 @@ import { YaroslavPasichnykConfigLoaderService } from "./students/yaroslav-pasich
 import { YaroslavTsvykConfigLoaderService } from "./students/yaroslav-tsvyk";
 import { OstapBlystsivConfigLoaderService } from "./students/ostap-blystsiv";
 import { DenysZarubaConfigLoaderService } from "./students/denys-zaruba";
+import { ZakalaOleksandrConfigLoaderService } from "./students/zakala-oleksandr";
 
 export class MainConfigLoaderService {
   private services: IConfigLoaderService[];
@@ -15,6 +16,7 @@ export class MainConfigLoaderService {
     this.services = [
       new AndriiSlobodianiukConfigLoaderService(),
       new OleksandrZhukConfigLoaderService(),
+      new ZakalaOleksandrConfigLoaderService(),
       new YaroslavPasichnykConfigLoaderService(),
       new YaroslavTsvykConfigLoaderService(),
       new OstapBlystsivConfigLoaderService(),
