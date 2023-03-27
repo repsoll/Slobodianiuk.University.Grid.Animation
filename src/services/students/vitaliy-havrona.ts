@@ -20,7 +20,7 @@ export class VitaliyHavronaConfigLoaderService implements IConfigLoaderService {
       surname: "Havrona",
       email: this.getStudentEmail(),
       projectName: "Heart",
-      personalProjectLink: "https://taras-rails-app.fly.dev/",
+      personalProjectLink: "https://happy-cliff-060c82f03.2.azurestaticapps.net/",
       header: Avatar(0),
       frames: generateFrames(),
     };
