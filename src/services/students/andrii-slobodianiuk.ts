@@ -18,7 +18,7 @@ export class AndriiSlobodianiukConfigLoaderService implements IConfigLoaderServi
             surname: 'Slobodianiuk',
             email: this.getStudentEmail(),
             projectName: 'Demo Project',
-            personalProjectLink: 'http://demo-lecture-3.azurewebsites.net',
+            personalProjectLink: 'https://github-tracker.azurewebsites.net',
             header: Constants.DefaultConfig.header,
             frames: Constants.DefaultConfig.frames
         }
