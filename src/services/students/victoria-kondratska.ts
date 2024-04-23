@@ -20,7 +20,7 @@ export class VictoriaKondratskaConfigLoaderService implements IConfigLoaderServi
             surname: 'Kondratska',
             email: this.getStudentEmail(),
             projectName: 'Airplane Learning',
-            personalProjectLink: 'https://airplanelearning.azurewebsites.net',
+            personalProjectLink: 'https://airplanelearningpolyglotpto.azurewebsites.net',
             header: {
                 frameNumber: 0,
                 pixels: this.generateLoadingCircleFrame(0),
