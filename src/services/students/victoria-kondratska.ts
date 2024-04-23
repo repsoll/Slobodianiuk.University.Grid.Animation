@@ -7,7 +7,7 @@ import IPixelState from '../../models/pixel-state';
 export class VictoriaKondratskaConfigLoaderService implements IConfigLoaderService {
 
     public getStudentName(): string {
-        return 'Victoria "Vitya" Kondratska';
+        return 'Victoria Kondratska';
     }
 
     public getStudentEmail(): string {
