@@ -1,45 +1,46 @@
 import IAnimationConfig from "../models/animation-config";
 import { IConfigLoaderService } from "./config-loader-interface";
+import { AndriiKozynyiConfigLoaderService } from "./students/andrii-kozynyi";
 import { AndriiSlobodianiukConfigLoaderService } from "./students/andrii-slobodianiuk";
-import { VitaliiSynytskyiConfigLoaderService } from "./students/vitalii-synytskyi";
+import { ArsenShvediukConfigLoaderService } from "./students/arsen-shvediuk";
+import { BardakovConfigLoaderService } from "./students/bardakov";
+import { BohdanDzirbaConfigLoaderService } from "./students/bohdan-dzirba";
+import { DaniilHulchenkoLoaderService } from "./students/daniil-hulchenko";
+import { DenysVelychkoConfigLoaderService } from "./students/denys-velychko";
+import { DenysZarubaConfigLoaderService } from "./students/denys-zaruba";
+import { DmytroSerafymConfigLoaderService } from "./students/dmytro_serafym";
+import { IlliaChumakConfigLoaderService } from "./students/illia-chumak";
+import { MariiaHusakConfigLoaderService } from "./students/mariia-husak";
+import { MykhailoHorpyniukConfigLoaderService } from "./students/mykhailo-horpyniuk";
+import { MykytaSirykConfigLoaderService } from "./students/mykyta-siryk";
+import { NazarPohonchukConfigLoaderService } from "./students/nazar-pohonchuk";
+import { NazarYarishConfigLoaderService } from "./students/nazar-yarish";
+import { OlehGeriiConfigLoaderService } from "./students/oleh-gerii";
+import { OlehMuzychukConfigLoaderService } from "./students/oleh-muzychuk";
+import { OlehSuvorovConfigLoaderService } from "./students/oleh-suvorov";
+import { OlesandrBiletskyiConfigLoaderService } from "./students/oleksandr-biletskyi";
+import { OleksandrZhovanukConfigLoaderService } from "./students/oleksandr-zhovanuk";
 import { OleksandrZhukConfigLoaderService } from "./students/oleksandr-zhuk";
+import { OleksiiPylypenkoConfigLoaderService } from "./students/oleksii-pylypenko";
+import { OstapBlystsivConfigLoaderService } from "./students/ostap-blystsiv";
+import { RuslanHavrilyakConfigLoaderService } from "./students/ruslan-havrilyak";
+import { StepTkachivskyiConfigLoaderService } from "./students/stepan-tkachivskyi";
+import { LozoviiTarasConfigLoaderService } from "./students/taras-lozovii";
+import { TarasRohulyaConfigLoaderService } from "./students/taras-rohulya";
+import { ValeriymanuilykConfigLoaderService } from "./students/valerii-manuilyk";
+import { VictoriaKondratskaConfigLoaderService } from "./students/victoria-kondratska";
+import { MyronVikaConfigLoaderService } from "./students/vika-myron";
+import { VitaliLyloConfigLoaderService } from "./students/vitali-lylo";
+import { VitaliiSynytskyiConfigLoaderService } from "./students/vitalii-synytskyi";
+import { MalishVitaliyConfigLoaderService } from "./students/vitalii.malysh";
+import { VitaliyHavronaConfigLoaderService } from "./students/vitaliy-havrona";
+import { VoievodaVladislavConfigLoaderService } from "./students/vlad-voievoda";
+import { KoarizVolodymyrConfigLoaderService } from "./students/volodymyr-kozariz";
+import { YaroslavHolovkoConfigLoaderService } from "./students/yaroslav-holovko";
 import { YaroslavPasichnykConfigLoaderService } from "./students/yaroslav-pasichnyk";
 import { YaroslavTsvykConfigLoaderService } from "./students/yaroslav-tsvyk";
-import { OstapBlystsivConfigLoaderService } from "./students/ostap-blystsiv";
-import { DenysZarubaConfigLoaderService } from "./students/denys-zaruba";
-import { VoievodaVladislavConfigLoaderService } from "./students/vlad-voievoda";
-import { IlliaChumakConfigLoaderService } from "./students/illia-chumak";
-import { NazarPohonchukConfigLoaderService } from "./students/nazar-pohonchuk";
-import { MalishVitaliyConfigLoaderService } from "./students/vitalii.malysh";
-import { ArsenShvediukConfigLoaderService } from "./students/arsen-shvediuk";
-import { DaniilHulchenkoLoaderService } from "./students/daniil-hulchenko";
-import { VitaliyHavronaConfigLoaderService } from "./students/vitaliy-havrona";
-import { RuslanHavrilyakConfigLoaderService } from "./students/ruslan-havrilyak";
-import { MyronVikaConfigLoaderService } from "./students/vika-myron";
-import { TarasRohulyaConfigLoaderService } from "./students/taras-rohulya";
-import { OleksandrZhovanukConfigLoaderService } from "./students/oleksandr-zhovanuk";
-import { BohdanDzirbaConfigLoaderService } from "./students/bohdan-dzirba";
-import { YaroslavHolovkoConfigLoaderService } from "./students/yaroslav-holovko";
-import { BardakovConfigLoaderService } from "./students/bardakov";
-import { ZakalaOleksandrConfigLoaderService } from "./students/zakala-oleksandr";
-import { ValeriymanuilykConfigLoaderService } from "./students/valerii-manuilyk";
-import { LozoviiTarasConfigLoaderService } from "./students/taras-lozovii";
-import { NazarYarishConfigLoaderService } from "./students/nazar-yarish";
-import { StepTkachivskyiConfigLoaderService } from "./students/stepan-tkachivskyi";
-import { VitaliLyloConfigLoaderService } from "./students/vitali-lylo";
-import { OlehGeriiConfigLoaderService } from "./students/oleh-gerii";
-import { DenysVelychkoConfigLoaderService } from "./students/denys-velychko";
 import { YuriiRobakConfigLoaderService } from "./students/yurii-robak";
-import { OlesandrBiletskyiConfigLoaderService } from "./students/oleksandr-biletskyi";
-import { OlehSuvorovConfigLoaderService } from "./students/oleh-suvorov";
-import { KoarizVolodymyrConfigLoaderService } from "./students/volodymyr-kozariz";
-import { OlehMuzychukConfigLoaderService } from "./students/oleh-muzychuk";
-import { OleksiiPylypenkoConfigLoaderService } from "./students/oleksii-pylypenko";
-import { MykhailoHorpyniukConfigLoaderService } from "./students/mykhailo-horpyniuk";
-import { DmytroSerafymConfigLoaderService } from "./students/dmytro_serafym";
-import { VictoriaKondratskaConfigLoaderService } from "./students/victoria-kondratska";
-import { AndriiKozynyiConfigLoaderService } from "./students/andrii-kozynyi";
-import { MariiaHusakConfigLoaderService } from "./students/mariia-husak";
+import { ZakalaOleksandrConfigLoaderService } from "./students/zakala-oleksandr";
 
 export class MainConfigLoaderService {
   private services: IConfigLoaderService[];
@@ -86,6 +87,7 @@ export class MainConfigLoaderService {
       new VictoriaKondratskaConfigLoaderService(),
       new AndriiKozynyiConfigLoaderService(),
       new MariiaHusakConfigLoaderService(),
+      new MykytaSirykConfigLoaderService(),
     ];
   }
 
