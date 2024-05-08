@@ -30,35 +30,34 @@ export class YourConfigLoaderService implements IConfigLoaderService {
 
 function createHeader(): IFrame {
     const pixels: IPixelState[] = [
-        // Palm outline
-        { x: 5, y: 8, color: Colour.White },
-        { x: 6, y: 8, color: Colour.White },
-        { x: 7, y: 8, color: Colour.White },
-        { x: 8, y: 8, color: Colour.White },
-        { x: 9, y: 8, color: Colour.White },
-        { x: 10, y: 8, color: Colour.White },
-        { x: 11, y: 8, color: Colour.White },
-        { x: 12, y: 8, color: Colour.White },
-        // Thumb
+        { x: 4, y: 7, color: Colour.White },
         { x: 5, y: 7, color: Colour.White },
         { x: 6, y: 7, color: Colour.White },
         { x: 7, y: 7, color: Colour.White },
-        // Index finger
-        { x: 8, y: 6, color: Colour.White },
-        { x: 9, y: 6, color: Colour.White },
-        { x: 10, y: 6, color: Colour.White },
-        // Middle finger
-        { x: 11, y: 5, color: Colour.White },
-        { x: 12, y: 5, color: Colour.White },
+        { x: 8, y: 7, color: Colour.White },
+        { x: 9, y: 7, color: Colour.White },
+        { x: 10, y: 7, color: Colour.White },
+        { x: 11, y: 7, color: Colour.White },
+        { x: 12, y: 7, color: Colour.White },
+        { x: 13, y: 7, color: Colour.White },
+        { x: 14, y: 7, color: Colour.White },
+        { x: 15, y: 7, color: Colour.White },
+        { x: 4, y: 6, color: Colour.White },
+        { x: 5, y: 6, color: Colour.White },
+        { x: 6, y: 6, color: Colour.White },
+        { x: 7, y: 5, color: Colour.White },
+        { x: 8, y: 5, color: Colour.White },
+        { x: 9, y: 5, color: Colour.White },
+        { x: 10, y: 4, color: Colour.White },
+        { x: 11, y: 4, color: Colour.White },
+        { x: 12, y: 4, color: Colour.White },
         { x: 13, y: 5, color: Colour.White },
-        // Ring finger
-        { x: 14, y: 6, color: Colour.White },
+        { x: 14, y: 5, color: Colour.White },
+        { x: 15, y: 5, color: Colour.White },
         { x: 15, y: 6, color: Colour.White },
-        { x: 16, y: 6, color: Colour.White },
-        // Little finger
-        { x: 17, y: 7, color: Colour.White },
-        { x: 18, y: 7, color: Colour.White },
-        { x: 19, y: 7, color: Colour.White },
+        { x: 15, y: 6, color: Colour.White },
+        { x: 15, y: 6, color: Colour.White },
+        { x: 15, y: 6, color: Colour.White },
     ];
 
     return {
