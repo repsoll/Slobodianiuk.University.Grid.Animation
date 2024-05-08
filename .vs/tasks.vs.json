@@ -1,0 +1,10 @@
+{
+  "version": "0.2.1",
+  "tasks": [
+    {
+      "taskLabel": "task-yana-mykhailova",
+      "appliesTo": "src/services/students/yana-mykhailova.ts",
+      "type": "launch"
+    }
+  ]
+}

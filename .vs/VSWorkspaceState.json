@@ -1,0 +1,13 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\.github\\workflows",
+    "\\src",
+    "\\src\\components",
+    "\\src\\constants",
+    "\\src\\services",
+    "\\src\\services\\students"
+  ],
+  "SelectedNode": "\\src\\services\\students\\yana-mykhailova.ts",
+  "PreviewInSolutionExplorer": false
+}
